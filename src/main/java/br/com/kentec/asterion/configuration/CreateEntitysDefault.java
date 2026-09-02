@@ -2,6 +2,7 @@ package br.com.kentec.asterion.configuration;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.transaction.annotation.Transactional;
 
+import br.com.kentec.asterion.repository.CaixaRepository;
+import br.com.kentec.asterion.repository.ContaRepository;
 import br.com.kentec.asterion.repository.DescricaoDespesaRepository;
 import br.com.kentec.asterion.repository.DescricaoReceitaRepository;
 import br.com.kentec.asterion.repository.PeriodoRepository;
 import br.com.kentec.asterion.repository.UserReposiroty;
 import br.com.kentec.asterion.util.Comum;
+import br.com.kentec.asterion.domain.Caixa;
+import br.com.kentec.asterion.domain.Conta;
 import br.com.kentec.asterion.domain.DescricaoDespesa;
 import br.com.kentec.asterion.domain.DescricaoReceita;
 import br.com.kentec.asterion.domain.Periodo;
@@ -36,6 +41,12 @@ public class CreateEntitysDefault {
 	
 	@Autowired
 	private DescricaoReceitaRepository drr;
+	
+	@Autowired
+	private CaixaRepository cxr;
+	
+	@Autowired
+	private ContaRepository ctr;
 	
 	@Bean
 	@Transactional
@@ -98,10 +109,25 @@ public class CreateEntitysDefault {
 				user.setEmail("contato@kentec.com.br");
 				user.setRole("DEV-SYSTEM");
 				user.setStatus("Ativo");
-				user.setSenhaUsuario(Comum.encrypt("devken"));
+				user.setSenhaUsuario(Comum.encrypt("devken00"));
 				user.setChaveUsuario(UUID.randomUUID().toString());
 				ur.save(user);
 			}
+			
+			Optional<User> user = ur.findById(1L);
+			
+			long caixas = cxr.count();
+			if(caixas == 0) {
+				Caixa caixa = new Caixa("Teste Desenvolvedor1", user.get(), "Ativo"); 
+				cxr.save(caixa);
+			}
+			
+			long contas = ctr.count();
+			if(contas == 0) {
+				Conta conta = new Conta("Teste Desenvolvedor1", user.get(), "Ativo"); 
+				ctr.save(conta);
+			}
+			
 		};
 	}
 }
