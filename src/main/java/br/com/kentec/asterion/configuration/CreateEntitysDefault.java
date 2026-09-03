@@ -1,4 +1,4 @@
-/*package br.com.kentec.asterion.configuration;
+package br.com.kentec.asterion.configuration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +27,7 @@ import br.com.kentec.asterion.domain.Periodo;
 import br.com.kentec.asterion.domain.User;
 
 @Configuration
-@Profile("dev")
+@Profile("prod")
 public class CreateEntitysDefault {
 	
 	@Autowired
@@ -131,4 +131,3 @@ public class CreateEntitysDefault {
 		};
 	}
 }
-*/
