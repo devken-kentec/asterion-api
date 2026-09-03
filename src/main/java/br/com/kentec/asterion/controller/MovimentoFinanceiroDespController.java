@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ import br.com.kentec.asterion.domain.MovimentoFinanceiroDespesa;
 import br.com.kentec.asterion.service.MovimentoFinanceiroDespService;
 
 @RestController
-@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
+//@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1/movimentoFinanceiro")
 public class MovimentoFinanceiroDespController {
 	
