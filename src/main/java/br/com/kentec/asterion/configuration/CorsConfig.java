@@ -1,4 +1,4 @@
-package br.com.kentec.asterion.configuration;
+/*package br.com.kentec.asterion.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -18,4 +18,4 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowCredentials(true)
                 .maxAge(3600);
     }
-}
+}*/

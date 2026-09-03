@@ -1,6 +1,6 @@
 package br.com.kentec.asterion.controller;
 
-//import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +19,7 @@ import br.com.kentec.asterion.domain.MovimentoFinanceiroReceita;
 import br.com.kentec.asterion.service.MovimentoFinanceiroRecService;
 
 @RestController
-//@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
+@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1/movimentoFinanceiro")
 public class MovimentoFinanceiroRecController {
 	
