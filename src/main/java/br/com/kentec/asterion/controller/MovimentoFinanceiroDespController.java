@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.kentec.asterion.DTO.MovimentoFinanceiroDespDTO;
-import br.com.kentec.asterion.DTO.MovimentoFinanceiroRecDTO;
 import br.com.kentec.asterion.domain.MovimentoFinanceiroDespesa;
 import br.com.kentec.asterion.service.MovimentoFinanceiroDespService;
 

@@ -1,4 +1,4 @@
-package br.com.kentec.asterion.configuration;
+/*package br.com.kentec.asterion.configuration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -131,3 +131,4 @@ public class CreateEntitysDefault {
 		};
 	}
 }
+*/
