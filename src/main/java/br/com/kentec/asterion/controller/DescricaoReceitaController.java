@@ -11,7 +11,7 @@ import br.com.kentec.asterion.domain.DescricaoReceita;
 import br.com.kentec.asterion.service.DescricaoReceitaService;
 
 @RestController
-@CrossOrigin(origins = "${spring.mvc.cors.allowed-origins}", maxAge = 3600)
+@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1/descricaoReceita")
 public class DescricaoReceitaController {
 	

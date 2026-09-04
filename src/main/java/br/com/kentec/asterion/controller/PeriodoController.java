@@ -11,7 +11,7 @@ import br.com.kentec.asterion.domain.Periodo;
 import br.com.kentec.asterion.service.PeriodoService;
 
 @RestController
-@CrossOrigin(origins = "${spring.mvc.cors.allowed-origins}", maxAge = 3600)
+@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1/periodo")
 public class PeriodoController {
 	
