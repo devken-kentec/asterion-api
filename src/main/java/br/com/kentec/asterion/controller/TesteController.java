@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins="${origin.cors.url}", maxAge = 3600)
+@CrossOrigin(origins="${spring.mvc.cors.allowed-origins}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1")
 public class TesteController {
 	

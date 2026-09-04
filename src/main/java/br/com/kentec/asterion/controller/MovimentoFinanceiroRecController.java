@@ -19,7 +19,7 @@ import br.com.kentec.asterion.domain.MovimentoFinanceiroReceita;
 import br.com.kentec.asterion.service.MovimentoFinanceiroRecService;
 
 @RestController
-@CrossOrigin(origins = "${origin.cors.url}", maxAge = 3600)
+@CrossOrigin(origins = "${spring.mvc.cors.allowed-origins}", maxAge = 3600)
 @RequestMapping("/asterion/api/v1/movimentoFinanceiro")
 public class MovimentoFinanceiroRecController {
 	
