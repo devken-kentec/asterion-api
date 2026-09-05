@@ -1,1 +1,0 @@
-import"./chunk-7CGTOI24.js";var t=[{path:"",title:"Listar Receitas",loadComponent:()=>import("./chunk-KLWAJNOA.js").then(o=>o.MovimentoFinanceiroListReceitaComponent)},{path:"new",title:"Movimento Financeiro",loadComponent:()=>import("./chunk-7XYT5EO5.js").then(o=>o.MovimentoFinanceiroFormComponent)}];export{t as movimentoFinanceiroRoutes};
